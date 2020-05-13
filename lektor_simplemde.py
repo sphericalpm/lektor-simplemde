@@ -22,7 +22,7 @@ TEMPLATE = '''
                     // update textarea value
                     e.value = editor.value();
 
-                    // dispatch syntetic event for react to update its state
+                    // dispatch a synthetic event for react to update its state
                     let ev = new Event('input', { bubbles: true });
                     ev.simulated = true;
                     e.dispatchEvent(ev);
@@ -61,7 +61,7 @@ class SimpleMdePlugin(Plugin):
     description = get_description(__module__)
 
     def on_server_spawn(self, *args, **kwargs):
-        # remove all rule besides first one which is edit redirect
+        # remove all rules except the first one which is edit redirect
         while len(dash.bp.deferred_functions) > 1:
             dash.bp.deferred_functions.pop()
         # ... and fill all the rules back with our wrapper template

@@ -20,7 +20,7 @@ TEMPLATE = '''
                 let editor = new SimpleMDE({ element: e });
                 editor.codemirror.on('change', () => {
                     // update textarea value
-                    e.value = editor.value();
+                    Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value').set.call(e, editor.value());
 
                     // dispatch a synthetic event for react to update its state
                     let ev = new Event('input', { bubbles: true });

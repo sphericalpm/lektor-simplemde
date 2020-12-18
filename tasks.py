@@ -1,1 +1,1 @@
-from spherical_dev.tasks import clean, flake, isort, test  # noqa: F401
+from spherical.dev.tasks import clean, dev, flake, isort, test  # noqa: F401

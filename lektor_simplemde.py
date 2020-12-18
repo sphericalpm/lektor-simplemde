@@ -1,7 +1,7 @@
 import email
 
 import pkg_resources
-from flask import Blueprint, render_template_string
+from flask import render_template_string
 from lektor.admin.modules import dash
 from lektor.pluginsystem import Plugin
 

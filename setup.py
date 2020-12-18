@@ -32,7 +32,7 @@ setuptools.setup(
 
     extras_require={
         'dev': [
-            'spherical-dev[dev]>0.0.2,<0.1',
+            'spherical-dev[dev]>=0.2.2,<0.3',
         ],
     },
 

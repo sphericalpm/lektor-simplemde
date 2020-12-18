@@ -1,1 +1,4 @@
-from spherical.dev.tasks import clean, dev, flake, isort, test  # noqa: F401
+# flake8: noqa
+from spherical.dev.tasks import clean, dev, flake, isort
+from spherical.dev.tasks import pypi_release as release
+from spherical.dev.tasks import test
